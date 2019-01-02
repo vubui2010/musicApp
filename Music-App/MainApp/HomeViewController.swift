@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import AVFoundation
-var songList: [String] = []
+
 var audioPlayer:AVAudioPlayer! //Su dung khi choi nhac offline
 var avPlayer: AVPlayer? // Su dung khi choi nhac tu URL online
 var playerItem:AVPlayerItem?
@@ -19,10 +19,13 @@ var timer: Timer?  //Dieu khien, hien thi thoi gian cua bai hat
 var DataBaiHat: [[String: Any]] = [[String: Any]] ()  //Parse data tu bang baihat luu vao TableData
 var DataChuDe:[String] = []
 var DataPlaylist:[String] = []
+var DataMixSong:[String] = []
+
+var songList: [String] = []
 class HomeViewController: UIViewController{
-    
     @IBOutlet weak var PlayListCollectionView: UICollectionView!
     @IBOutlet weak var ThemeCollectionView: UICollectionView!
+    @IBOutlet weak var MixSongTableView: UITableView!
     
     var db: Firestore!
     override func viewDidLoad() {
@@ -32,28 +35,36 @@ class HomeViewController: UIViewController{
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
+        
+       
         // Do any additional setup after loading the view.
         print(DataChuDe)
         print(DataChuDe.count)
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         getInfoForSongs()
         getInfoForThemes()
         getInfoForPLaylist()
     }
 
-    func getInfoForSongs(){
+   public func getInfoForSongs(){
         
         db.collection("baihat").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                for document in querySnapshot!.documents {                    DataBaiHat.append((document.data()))
+                for document in querySnapshot!.documents {
+                    DataBaiHat.append(document.data() )
                     songList.append(document.data()["LinkBH"] as! String)
-                   
+                    DataMixSong.append(document.data()["TenBH"] as! String)
+                    
                 }
+                self.MixSongTableView.reloadData()
                 }
             }
     }
@@ -119,4 +130,19 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
             return collectCell!
         }
     }
+}
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DataBaiHat.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mixsongcell", for: indexPath) as! MixSongHomePageTableViewCell
+        cell.textLabel?.text = DataBaiHat[indexPath.row]["TenBH"] as? String
+            cell.detailTextLabel?.text = DataBaiHat[indexPath.row]["TenCS"] as? String
+        
+        return cell
+    }
+    
+    
 }
