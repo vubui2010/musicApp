@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ThemesCollectionViewCell: UICollectionViewCell {
+class AlbumCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var lbltest: UILabel!
-    @IBOutlet weak var imgTheme: UIImageView!
+    @IBOutlet weak var infoOfAlbum: UILabel!
+    
+    @IBOutlet weak var imgAlbum: UIImageView!
 }

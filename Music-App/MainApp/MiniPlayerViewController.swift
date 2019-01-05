@@ -7,12 +7,32 @@
 //
 
 import UIKit
+protocol MiniPlayerDelegate: class {
+    func expandSong(song: Song)
+}
 
-class MiniPlayerViewController: UIViewController {
+class MiniPlayerViewController: UIViewController, SongSubscribers {
 
+    
+    var currentSong: Song?
+    weak var delegate: MiniPlayerDelegate?
+    
+    @IBOutlet weak var infoNameSong: UILabel!
+    @IBOutlet weak var infoNameSinger: UILabel!
+    
+    @IBAction func ToPreviousSong(_ sender: UIButton) {
+    }
+    
+    @IBAction func PlayOrStop(_ sender: UIButton) {
+    }
+    
+    @IBAction func ToNextSong(_ sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configure(isChoose: -1, title: "", artist: "")
         // Do any additional setup after loading the view.
     }
     
@@ -28,3 +48,20 @@ class MiniPlayerViewController: UIViewController {
     */
 
 }
+extension MiniPlayerViewController{
+    func configure(isChoose: Int, title: String, artist: String) {
+        if (isChoose != -1){
+            infoNameSong.text = title
+            infoNameSinger.text = artist
+    }
+    else {
+            infoNameSong.text = nil
+           infoNameSinger.text = nil
+        }
+      
+ }
+}
+extension MiniPlayerViewController{
+    
+}
+

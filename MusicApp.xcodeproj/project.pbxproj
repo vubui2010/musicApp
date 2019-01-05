@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		190066B421C1585E0017C352 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190066B321C1585E0017C352 /* ImageService.swift */; };
 		190132C921BA823F00B50C3A /* PlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190132C821BA823F00B50C3A /* PlayingViewController.swift */; };
-		19033A4B21BAB89300ABA4B7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19033A4A21BAB89300ABA4B7 /* ListViewController.swift */; };
+		19033A4B21BAB89300ABA4B7 /* listOfSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19033A4A21BAB89300ABA4B7 /* listOfSong.swift */; };
 		19033A4D21BAEE3A00ABA4B7 /* EmKhongThe-TienTienTouliver-5716864.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19033A4C21BAEE3A00ABA4B7 /* EmKhongThe-TienTienTouliver-5716864.mp3 */; };
 		190414BB21C0E18A00BA5CEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 190414BA21C0E18A00BA5CEB /* GoogleService-Info.plist */; };
+		1927E41721DE55CA0097A0EB /* TopicAndGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927E41621DE55CA0097A0EB /* TopicAndGenreCollectionViewCell.swift */; };
+		1927E41921DE68F70097A0EB /* TopicAndGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927E41821DE68F70097A0EB /* TopicAndGenreViewController.swift */; };
 		19301F9D21DB7A6C00D61337 /* MiniPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19301F9C21DB7A6C00D61337 /* MiniPlayerViewController.swift */; };
+		1937B9EF21E0D2D800FEE705 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937B9EE21E0D2D700FEE705 /* Song.swift */; };
+		1937B9F121E0D35C00FEE705 /* SongSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937B9F021E0D35C00FEE705 /* SongSubscriber.swift */; };
 		193E4BED21B8B97A00047814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193E4BEC21B8B97A00047814 /* AppDelegate.swift */; };
 		193E4BF221B8B97A00047814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193E4BF021B8B97A00047814 /* Main.storyboard */; };
 		193E4BF421B8B97C00047814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193E4BF321B8B97C00047814 /* Assets.xcassets */; };
@@ -23,9 +27,11 @@
 		193E4C2121B8BD8F00047814 /* AnhQuenVoiCoDonFeliksAvlin-QuangAnhRhyder-5768389.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 193E4C2021B8BD8E00047814 /* AnhQuenVoiCoDonFeliksAvlin-QuangAnhRhyder-5768389.mp3 */; };
 		193EDB4421BC323C00D8358D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193EDB4321BC323C00D8358D /* HomeViewController.swift */; };
 		195E646821DBCBA800951BD5 /* MixSongHomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E646721DBCBA800951BD5 /* MixSongHomePageTableViewCell.swift */; };
+		1968A40321DEFEEE00FD2149 /* PlaylistTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968A40221DEFEEE00FD2149 /* PlaylistTabCollectionViewCell.swift */; };
+		1968A40721DF02CD00FD2149 /* PlaylistTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968A40621DF02CD00FD2149 /* PlaylistTabViewController.swift */; };
 		198F5BB321C0FB1900EF561C /* OneSingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F5BB221C0FB1900EF561C /* OneSingTableViewCell.swift */; };
 		19AD232021C2337900872FE7 /* PlayListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD231F21C2337900872FE7 /* PlayListCollectionViewCell.swift */; };
-		19FFB36621C21468000C7AFA /* ThemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FFB36521C21468000C7AFA /* ThemesCollectionViewCell.swift */; };
+		19FFB36621C21468000C7AFA /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FFB36521C21468000C7AFA /* AlbumCollectionViewCell.swift */; };
 		5883A4F9B1FD20E100EABF4E /* Pods_MusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37385EBEBD7928820A78BFE /* Pods_MusicApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,10 +55,14 @@
 /* Begin PBXFileReference section */
 		190066B321C1585E0017C352 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		190132C821BA823F00B50C3A /* PlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingViewController.swift; sourceTree = "<group>"; };
-		19033A4A21BAB89300ABA4B7 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		19033A4A21BAB89300ABA4B7 /* listOfSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listOfSong.swift; sourceTree = "<group>"; };
 		19033A4C21BAEE3A00ABA4B7 /* EmKhongThe-TienTienTouliver-5716864.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "EmKhongThe-TienTienTouliver-5716864.mp3"; sourceTree = "<group>"; };
 		190414BA21C0E18A00BA5CEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1927E41621DE55CA0097A0EB /* TopicAndGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicAndGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		1927E41821DE68F70097A0EB /* TopicAndGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicAndGenreViewController.swift; sourceTree = "<group>"; };
 		19301F9C21DB7A6C00D61337 /* MiniPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerViewController.swift; sourceTree = "<group>"; };
+		1937B9EE21E0D2D700FEE705 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		1937B9F021E0D35C00FEE705 /* SongSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSubscriber.swift; sourceTree = "<group>"; };
 		193E4BE921B8B97A00047814 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193E4BEC21B8B97A00047814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		193E4BF121B8B97A00047814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,9 +79,11 @@
 		193E4C2021B8BD8E00047814 /* AnhQuenVoiCoDonFeliksAvlin-QuangAnhRhyder-5768389.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "AnhQuenVoiCoDonFeliksAvlin-QuangAnhRhyder-5768389.mp3"; sourceTree = "<group>"; };
 		193EDB4321BC323C00D8358D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		195E646721DBCBA800951BD5 /* MixSongHomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixSongHomePageTableViewCell.swift; sourceTree = "<group>"; };
+		1968A40221DEFEEE00FD2149 /* PlaylistTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTabCollectionViewCell.swift; sourceTree = "<group>"; };
+		1968A40621DF02CD00FD2149 /* PlaylistTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTabViewController.swift; sourceTree = "<group>"; };
 		198F5BB221C0FB1900EF561C /* OneSingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSingTableViewCell.swift; sourceTree = "<group>"; };
 		19AD231F21C2337900872FE7 /* PlayListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCollectionViewCell.swift; sourceTree = "<group>"; };
-		19FFB36521C21468000C7AFA /* ThemesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesCollectionViewCell.swift; sourceTree = "<group>"; };
+		19FFB36521C21468000C7AFA /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		A37385EBEBD7928820A78BFE /* Pods_MusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87342166FEFAB1D41E0E28D /* Pods-MusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicApp/Pods-MusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F07DC27CDF80297F211E0FD9 /* Pods-MusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicApp/Pods-MusicApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,14 +118,12 @@
 		190066B021C157990017C352 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
-				193EDB4321BC323C00D8358D /* HomeViewController.swift */,
-				19033A4A21BAB89300ABA4B7 /* ListViewController.swift */,
-				190132C821BA823F00B50C3A /* PlayingViewController.swift */,
+				1968A40121DEFEC500FD2149 /* Playlist Tab */,
+				1927E41221DE54EE0097A0EB /* Topic and Genre Tab */,
+				1927E41321DE55520097A0EB /* Home Tab */,
+				19033A4A21BAB89300ABA4B7 /* listOfSong.swift */,
 				198F5BB221C0FB1900EF561C /* OneSingTableViewCell.swift */,
-				19FFB36521C21468000C7AFA /* ThemesCollectionViewCell.swift */,
-				19AD231F21C2337900872FE7 /* PlayListCollectionViewCell.swift */,
 				19301F9C21DB7A6C00D61337 /* MiniPlayerViewController.swift */,
-				195E646721DBCBA800951BD5 /* MixSongHomePageTableViewCell.swift */,
 			);
 			path = MainApp;
 			sourceTree = "<group>";
@@ -133,6 +143,36 @@
 				190066B321C1585E0017C352 /* ImageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1927E41221DE54EE0097A0EB /* Topic and Genre Tab */ = {
+			isa = PBXGroup;
+			children = (
+				1927E41621DE55CA0097A0EB /* TopicAndGenreCollectionViewCell.swift */,
+				1927E41821DE68F70097A0EB /* TopicAndGenreViewController.swift */,
+			);
+			path = "Topic and Genre Tab";
+			sourceTree = "<group>";
+		};
+		1927E41321DE55520097A0EB /* Home Tab */ = {
+			isa = PBXGroup;
+			children = (
+				193EDB4321BC323C00D8358D /* HomeViewController.swift */,
+				190132C821BA823F00B50C3A /* PlayingViewController.swift */,
+				19FFB36521C21468000C7AFA /* AlbumCollectionViewCell.swift */,
+				19AD231F21C2337900872FE7 /* PlayListCollectionViewCell.swift */,
+				195E646721DBCBA800951BD5 /* MixSongHomePageTableViewCell.swift */,
+			);
+			path = "Home Tab";
+			sourceTree = "<group>";
+		};
+		1937B9ED21E0D2B200FEE705 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1937B9EE21E0D2D700FEE705 /* Song.swift */,
+				1937B9F021E0D35C00FEE705 /* SongSubscriber.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		193E4BE021B8B97A00047814 = {
@@ -160,6 +200,7 @@
 		193E4BEB21B8B97A00047814 /* Music-App */ = {
 			isa = PBXGroup;
 			children = (
+				1937B9ED21E0D2B200FEE705 /* Model */,
 				190066B221C1581F0017C352 /* Services */,
 				193E714321B97DD80086A01F /* Music-File-Support */,
 				193E4BEC21B8B97A00047814 /* AppDelegate.swift */,
@@ -198,6 +239,15 @@
 				193E4C2021B8BD8E00047814 /* AnhQuenVoiCoDonFeliksAvlin-QuangAnhRhyder-5768389.mp3 */,
 			);
 			path = "Music-File-Support";
+			sourceTree = "<group>";
+		};
+		1968A40121DEFEC500FD2149 /* Playlist Tab */ = {
+			isa = PBXGroup;
+			children = (
+				1968A40221DEFEEE00FD2149 /* PlaylistTabCollectionViewCell.swift */,
+				1968A40621DF02CD00FD2149 /* PlaylistTabViewController.swift */,
+			);
+			path = "Playlist Tab";
 			sourceTree = "<group>";
 		};
 		46BBF39A4E2B1D3F50C8CF51 /* Frameworks */ = {
@@ -438,14 +488,20 @@
 			files = (
 				19AD232021C2337900872FE7 /* PlayListCollectionViewCell.swift in Sources */,
 				195E646821DBCBA800951BD5 /* MixSongHomePageTableViewCell.swift in Sources */,
-				19FFB36621C21468000C7AFA /* ThemesCollectionViewCell.swift in Sources */,
+				19FFB36621C21468000C7AFA /* AlbumCollectionViewCell.swift in Sources */,
 				19301F9D21DB7A6C00D61337 /* MiniPlayerViewController.swift in Sources */,
-				19033A4B21BAB89300ABA4B7 /* ListViewController.swift in Sources */,
+				19033A4B21BAB89300ABA4B7 /* listOfSong.swift in Sources */,
 				190132C921BA823F00B50C3A /* PlayingViewController.swift in Sources */,
 				193E4BED21B8B97A00047814 /* AppDelegate.swift in Sources */,
 				193EDB4421BC323C00D8358D /* HomeViewController.swift in Sources */,
 				198F5BB321C0FB1900EF561C /* OneSingTableViewCell.swift in Sources */,
+				1937B9EF21E0D2D800FEE705 /* Song.swift in Sources */,
+				1937B9F121E0D35C00FEE705 /* SongSubscriber.swift in Sources */,
+				1927E41721DE55CA0097A0EB /* TopicAndGenreCollectionViewCell.swift in Sources */,
+				1968A40721DF02CD00FD2149 /* PlaylistTabViewController.swift in Sources */,
+				1927E41921DE68F70097A0EB /* TopicAndGenreViewController.swift in Sources */,
 				190066B421C1585E0017C352 /* ImageService.swift in Sources */,
+				1968A40321DEFEEE00FD2149 /* PlaylistTabCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

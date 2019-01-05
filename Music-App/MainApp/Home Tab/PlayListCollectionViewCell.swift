@@ -10,5 +10,6 @@ import UIKit
 
 class PlayListCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var infoPlaylist: UILabel!
     @IBOutlet weak var imgPlaylist: UIImageView!
 }
