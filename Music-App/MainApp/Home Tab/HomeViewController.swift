@@ -31,13 +31,18 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var AlbumCollectionView: UICollectionView!
     @IBOutlet weak var MixSongTableView: UITableView!
     
-   
-    
+    @IBAction func searchItem(_ sender: UIBarButtonItem) {
+        guard let SearchResultScreen = storyboard?.instantiateViewController(withIdentifier: "searchscreen") as? SearchResultViewController else {
+                        assertionFailure("No view can expand")
+                        return
+                    }
+                    present(SearchResultScreen, animated: false)
+    }
     
     var db: Firestore!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         db = Firestore.firestore()
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
@@ -206,9 +211,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         let artist = DataBaiHat[indexOfSong]["TenCS"] as! String
         
         miniPlayer?.configure(isChoose: 1, title: title, artist: artist )
-        
+        miniPlayer?.choosedByOne = 1
+        miniPlayer?.currentDataSong = DataBaiHat
         print(DataBaiHat[indexPath.row]["TenBH"] as! String)
         
     }
     
 }
+
+

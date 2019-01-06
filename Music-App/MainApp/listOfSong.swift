@@ -23,7 +23,7 @@ class listOfSong: UIViewController, UITableViewDelegate ,UITableViewDataSource{
     @IBOutlet weak var Miniplayer: UIView!
     
     
-    var DataSong: [[String:Any]] = [[String:Any]]()
+   public var DataSong: [[String:Any]] = [[String:Any]]()
     var itemSelected: String = ""
     var boolSelectedAlbumOrPlaylist: Int = 0
 
@@ -78,9 +78,6 @@ class listOfSong: UIViewController, UITableViewDelegate ,UITableViewDataSource{
             ImageService.getImage(withURL: url! ){ image in
                 cell.imgSong.image = image
             }
-            
-        
-
         
         return cell
     }
@@ -93,13 +90,14 @@ class listOfSong: UIViewController, UITableViewDelegate ,UITableViewDataSource{
         avPlayer = AVPlayer(playerItem: playerItem)
         avPlayer?.rate = 1.0
         avPlayer!.play()
-        
+        indexOfSong = indexPath.row
        
         let title = DataSong[indexPath.row]["TenBH"] as! String
         let artist = DataSong[indexPath.row]["TenCS"] as! String
         
         miniPlayer?.configure(isChoose: 1, title: title, artist: artist )
-        
+        miniPlayer?.choosedByOne = 2
+        miniPlayer?.currentDataSong = DataSong
         print(DataSong[indexPath.row]["TenBH"] as! String)
         
 }

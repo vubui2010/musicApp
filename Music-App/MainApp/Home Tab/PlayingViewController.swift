@@ -21,6 +21,10 @@ class PlayingViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var timeOfSongLbl: UILabel!
     @IBOutlet weak var slideTimeOfSong: UISlider!
     
+    @IBAction func btnHideExpand(_ sender: UIButton) {
+        
+        self.dismiss(animated: false)
+    }
     @IBOutlet weak var timePlayingOfSong: UILabel!
     
     
